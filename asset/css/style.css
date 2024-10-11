@@ -1,0 +1,138 @@
+@font-face{
+  font-family: 'clock font';
+  src: url(../foonts/clock-foont/AdvancedPixelLcd7-yGOq.ttf);
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #dbe4e6;
+}
+.clock{
+  width: 520px;
+  padding: 40px;
+  background-color: #f3f3f3;
+  box-shadow: 10px 10px 50px #808080 ;
+  border-radius: 8px;
+  @media (max-width: 575.98px) {
+    width: 300px;
+    padding: 20px;
+   }
+}
+
+
+.display{
+  padding: 40px;
+  border-radius: 6px;
+  background-color: #dddddd;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08) inset,
+        0 1px 1px #fafafa;
+  position: relative;
+}
+
+.clock .display .weekdays{
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  /* width: 100%; */
+  top: 10px;
+  left: 0;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  @media (max-width: 575.98px) {
+    font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  /* width: 100%; */
+  top: 5px;
+  left: 0;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  }
+
+}
+.weekdays span{
+  padding: 0 10px;
+  opacity: 0.2;
+   @media (max-width: 575.98px) {
+   padding: 20px 8px;
+  }
+}
+.weekdays span.active{
+  opacity: 1;
+}
+
+.display .time-display{
+  display: flex;
+  justify-content: center;
+}
+.display .time{
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+ margin-top: 10px;
+  letter-spacing: 3px;
+  font-family: 'clock font';
+
+  @media (max-width: 575.98px) {
+     font-size: 18px;
+  display: flex;
+  justify-content: center;
+ margin-top: 10px;
+  letter-spacing: 2px;
+  font-family: 'clock font';
+   }
+}
+.time-display .fotmat{
+  font-size: 30px;
+  margin-top: 32px;
+  margin-left: 10px;
+  font-family: "Open Sans", sans-serif;
+
+  @media (max-width: 575.98px) {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 5px;
+   }
+}
+.time .dot{
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker{
+  25%{opacity: 0;}
+}
+.date{
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  position: absolute;
+  top: 120px;
+
+  font-family: "Open Sans", sans-serif;
+  span{
+    padding: 0 15px;
+   opacity: 0.2;
+   color: red;
+  }
+   @media (max-width: 575.98px) {
+    font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  position: absolute;
+  top: 100px;
+   }
+}
+
+
+
+
